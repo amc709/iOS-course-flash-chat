@@ -22,4 +22,19 @@ class WelcomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "welcome2login" {
+            let destination = segue.destination as! LogInViewController
+            
+            print("Opening login page")
+            
+            
+        }
+    }
+    
+    @IBAction func loginBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "welcome2login", sender: self)
+    }
+    
 }
